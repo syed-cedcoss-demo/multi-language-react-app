@@ -1,13 +1,16 @@
 import { useTranslation } from "react-i18next";
-import "./App.css";
-import Team from "./components/teams/Team";
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
 
 function App() {
   const { t, i18n } = useTranslation();
   return (
-    <div className="App">
-      <Team t={t} i18n={i18n} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login t={t} i18n={i18n} />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+    </Routes>
   );
 }
 
