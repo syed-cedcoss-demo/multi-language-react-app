@@ -1,0 +1,10 @@
+{
+  "description": {
+    "part1": "Edit src/App.js and save to reload.",
+    "part2": "Learn React"
+  },
+  "team": {
+    "title": "Meet our leadership",
+    "description": "Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse."
+  }
+}
