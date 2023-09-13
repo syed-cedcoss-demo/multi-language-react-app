@@ -1,6 +1,7 @@
 import { Combobox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
+import { TranslateContext } from "../../context/TranslateContext";
 
 const people = [
   {
@@ -23,9 +24,10 @@ const people = [
   },
 ];
 
-const LanguageChange = ({ i18n, t }) => {
+const LanguageChange = () => {
   const [selected, setSelected] = useState(people[0]);
-
+  const { translation } = useContext(TranslateContext);
+  const { i18n } = translation;
   return (
     <Combobox
       value={selected}
@@ -35,12 +37,19 @@ const LanguageChange = ({ i18n, t }) => {
       }}
     >
       <div className="relative mt-1 w-20">
-        <div className="relative cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+        <div className="relative cursor-default overflow-hidden rounded-md bg-white text-left shadow-md sm:text-sm">
           <Combobox.Input
-            className="border-none py-2 pl-2 text-sm leading-5 text-gray-900 focus:ring-8"
+            className="border-none py-2 pl-2 text-sm leading-5 text-gray-900 "
             displayValue={(person) => person.name}
             disabled
           />
+          {/* <img
+            src={"https://www.worldometers.info//img/flags/small/tn_in-flag.gif"}
+            alt=""
+            sizes=""
+            srcset={"https://www.worldometers.info//img/flags/small/tn_in-flag.gif"}
+            className="w-5 h-5"
+          /> */}
           <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
           </Combobox.Button>

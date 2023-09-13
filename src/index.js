@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import { TranslateContextProvider } from "./context/TranslateContext";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./translation/i18n";
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <TranslateContextProvider>
+        <App />
+      </TranslateContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

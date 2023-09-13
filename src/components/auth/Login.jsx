@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { TranslateContext } from "../../context/TranslateContext";
 import AuthLayout from "../layout/Auth";
-const Login = ({ t, i18n }) => {
+const Login = () => {
   const navigate = useNavigate();
+  const { translation } = useContext(TranslateContext);
+  const { t } = translation;
   return (
-    <AuthLayout t={t} i18n={i18n}>
+    <AuthLayout>
       <div className="w-11/12 md:w-2/3 bg-white shadow-2xl p-6 rounded-lg">
         <h1 className="mb-4 font-bold secondary-radiant">{t("login.form.heading")}</h1>
         <form>

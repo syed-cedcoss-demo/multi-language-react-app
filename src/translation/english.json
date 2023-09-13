@@ -1,5 +1,4 @@
 {
-  
   "login": {
     "title": "Zoho Inventory Integration by CedCommerce",
     "description": "Automate Inventory & Order syncing across multiple selling platforms.",
@@ -15,12 +14,12 @@
       "createInfo":"New to CedCommerce?"
     }
   },
-  "team": {
-    "title": "Meet our leadership",
-    "description": "Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse."
-  },
   "footer":{
     "info":"A CedCommerce Inc Product @2023. Need Help?",
     "link":"Get Support"
+  },
+  "team": {
+    "title": "Meet our leadership",
+    "description": "Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse."
   }
 }

@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { TranslateContext } from "../../context/TranslateContext";
 import LanguageChange from "../shared/LanguageChange";
 
-const Auth = (props) => {
-  const { t, i18n, children } = props;
+const Auth = ({ children }) => {
+  const { translation } = useContext(TranslateContext);
+  const { t, i18n } = translation;
+
   return (
     <div className="h-screen bg-neutral-200 bg-no-repeat">
       <div className="absolute top-0 right-0 p-3">
@@ -21,8 +25,8 @@ const Auth = (props) => {
       </div>
       <div className="md:absolute p-3 bottom-0 left-0 right-0">
         <p className="text-center text-sm secondary-radiant">
-          A CedCommerce Inc Product @2023. Need Help?{" "}
-          <span className="text-blue-500 cursor-pointer">Get Support</span>
+          {t("footer.info")}{" "}
+          <span className="text-blue-500 cursor-pointer">{t("footer.link")}</span>
         </p>
       </div>
     </div>

@@ -1,7 +1,22 @@
 {
   "login": {
-    "part1": "Ändere src/App.js und speichere um neu zu laden.",
-    "part2": "Lerne React"
+    "title": "Zoho Inventory-integratie door CedCommerce",
+    "description": "Automatiseer de synchronisatie van voorraad en bestellingen op meerdere verkoopplatforms.",
+    "form":{
+      "heading":"Log in op jouw account",
+      "emailLbl":"E-mail",
+      "emailNpt":"Voer email in",
+      "passLbl":"Wachtwoord",
+      "passNpt":"Voer wachtwoord in",
+      "btn":"Log in",
+      "forgetLnk":"Wachtwoord vergeten",
+      "createLnk":"Account aanmaken",
+      "createInfo":"Nieuw bij CedCommerce?"
+    }
+  },
+  "footer":{
+    "info":"Een CedCommerce Inc-product @2023. Hulp nodig?",
+    "link":"Krijg ondersteuning"
   },
   "team": {
     "title": "Maak kennis met ons leiderschap",
