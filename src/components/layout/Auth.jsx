@@ -1,15 +1,18 @@
-const Auth = ({ children }) => {
+import LanguageChange from "../shared/LanguageChange";
+
+const Auth = (props) => {
+  const { t, i18n, children } = props;
   return (
     <div className="h-screen bg-neutral-200 bg-no-repeat">
+      <div className="absolute top-0 right-0 p-3">
+        <LanguageChange i18n={i18n} t={t} />
+      </div>
+
       <div className="grid grid-flow-row grid-cols-3 min-h-full min-w-full ">
         <div className="flex flex-col items-center p-2 mt-40 col-span-3 md:col-span-1 md:mb-3">
           <div className="w-11/12 md:max-w-xs">
-            <h1 className="font-extrabold text-2xl primary-radiant">
-              Zoho Inventory Integration by CedCommerce
-            </h1>
-            <p className="text-lg secondary-radiant">
-              Automate Inventory & Order syncing across multiple selling platforms.
-            </p>
+            <h1 className="font-extrabold text-2xl primary-radiant">{t("login.title")}</h1>
+            <p className="text-lg secondary-radiant">{t("login.description")}</p>
           </div>
         </div>
         <div className="col-span-3 md:col-span-2 flex flex-col justify-center items-center">

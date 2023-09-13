@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Login t={t} i18n={i18n} />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Login t={t} i18n={i18n} />} />
       <Route path="/signup" element={<Signup />} />
     </Routes>
   );
